@@ -1,6 +1,7 @@
 // alert('Hi!');
 // Log to console
-/*
+// ------------------------------------------
+/* 
 console.log('this is console log from source code');
 console.log(123);
 console.log(true);
@@ -16,9 +17,11 @@ console.warn('this is a waring!');
 console.time('hello');
     console.log(123);
 console.timeEnd('hello');
-*/
+*/ 
+// ------------------------------------------
 
 // variables are var, let, const
+// ------------------------------------------
 /*
 var name = 'John Doe';
 console.log(name);
@@ -41,6 +44,7 @@ var firstName = "John"; //camel case
 var first_name = 'Sara'; //Underscore
 var FirsName = 'Tom'; //Pascal case
 */
+// ------------------------------------------
 
 // LET
 //we do same as var
@@ -54,6 +58,8 @@ var FirsName = 'Tom'; //Pascal case
 //Have to assign a value
 // const greeting;
 
+// ------------------------------------------
+/*
 //some people confuse when we use const with array , object and primitive data (string, number) thing can be change but can not re-assign 
 //create object literal
 const person = {
@@ -71,5 +77,49 @@ number.push(6);
 //push() is method to add on to the array
 console.log(number);
 //using const unless i plan the value changing , unless i need to initialize it , iterator or loop. other than that using const, now that this value should not be re assign, it can mutate if it is an array or object , that make your code more secure , robust, more readable
+
+//Data Types in JS
+
+//String
+const name = 'Seulgi';
+//Age 
+const age = 25;
+//Boolean
+const hasKid = false;
+//Null
+const boyFriend = null;
+//Undefined
+let redVelvet;
+// Symbol
+const sym = Symbol();
+
+//REFERENCE TYPES - Objects
+//Array
+const hobbies = ['Dance', 'singing'];
+// Object literals
+const address = {
+    city: 'Ansan',
+    State: 'Gyeonggi-do,KR'
+};
+
+//Date
+const today = new Date();
+
+
+
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof hasKid);
+console.log(typeof boyFriend);
+console.log(typeof redVelvet);
+console.log(typeof sym);
+
+console.log(typeof hobbies);
+console.log(typeof address);
+console.log(today);
+console.log(typeof today);
+console.log();
+*/
+// ------------------------------------------
 
 

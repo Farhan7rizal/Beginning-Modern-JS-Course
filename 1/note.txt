@@ -1,3 +1,0 @@
-query selector in chrome dev tools
-example in console:
-document.querySelector('h1').style.color = 'green'
