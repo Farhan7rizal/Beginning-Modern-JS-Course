@@ -1,5 +1,6 @@
 // alert('Hi!');
 // Log to console
+/*
 console.log('this is console log from source code');
 console.log(123);
 console.log(true);
@@ -15,7 +16,60 @@ console.warn('this is a waring!');
 console.time('hello');
     console.log(123);
 console.timeEnd('hello');
-
-/*
-
 */
+
+// variables are var, let, const
+/*
+var name = 'John Doe';
+console.log(name);
+name = 'Steve Smith';
+console.log(name); 
+// so we can re-assign variables with var, and let
+
+//Init variables
+var greeting; //undefined
+console.log(greeting);
+greeting = 'Hello';
+console.log(greeting); 
+//the reason we init var , for example for IF statement.
+
+//rule and convention in JS
+//this character are the only that can be inside of variable, letters, numbers, _, $
+//can not start with number
+
+var firstName = "John"; //camel case
+var first_name = 'Sara'; //Underscore
+var FirsName = 'Tom'; //Pascal case
+*/
+
+// LET
+//we do same as var
+
+//CONST
+    
+// const name = 'John';
+// console.log(name);
+//can not re-assign
+// name = 'Sara';
+//Have to assign a value
+// const greeting;
+
+//some people confuse when we use const with array , object and primitive data (string, number) thing can be change but can not re-assign 
+//create object literal
+const person = {
+    name:'John',
+    age:30
+}
+//in const we can not change a whole array, but data inside array it can
+person.name = 'Sara';
+person.age = 32;
+
+// console.log(person);
+
+const number = [1,2,3,4,5];
+number.push(6);
+//push() is method to add on to the array
+console.log(number);
+//using const unless i plan the value changing , unless i need to initialize it , iterator or loop. other than that using const, now that this value should not be re assign, it can mutate if it is an array or object , that make your code more secure , robust, more readable
+
+
