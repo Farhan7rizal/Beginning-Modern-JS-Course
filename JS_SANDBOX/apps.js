@@ -1,7 +1,8 @@
 // alert('Hi!');
-// Log to console
-// ------------------------------------------
+// * Log to console
 /* 
+//! ------------------------------------------
+
 console.log('this is console log from source code');
 console.log(123);
 console.log(true);
@@ -17,56 +18,56 @@ console.warn('this is a waring!');
 console.time('hello');
     console.log(123);
 console.timeEnd('hello');
-*/ 
-// ------------------------------------------
+ 
+//! ------------------------------------------
+*/
 
-// variables are var, let, const
-// ------------------------------------------
 /*
+//!------------------------------------------
+//*! variables are var, let, const
+
+//*? VAR
 var name = 'John Doe';
 console.log(name);
 name = 'Steve Smith';
 console.log(name); 
-// so we can re-assign variables with var, and let
+//*so we can re-assign variables with var, and let
 
-//Init variables
+//*Init variables
 var greeting; //undefined
 console.log(greeting);
 greeting = 'Hello';
 console.log(greeting); 
-//the reason we init var , for example for IF statement.
+//*the reason we init var , for example for IF statement.
 
-//rule and convention in JS
-//this character are the only that can be inside of variable, letters, numbers, _, $
-//can not start with number
+//*rule and convention in JS
+//*this character are the only that can be inside of variable, letters, numbers, _, $
+//*can not start with number
 
 var firstName = "John"; //camel case
 var first_name = 'Sara'; //Underscore
 var FirsName = 'Tom'; //Pascal case
-*/
-// ------------------------------------------
 
-// LET
-//we do same as var
 
-//CONST
+//*?LET
+//*we do same as var
+
+//*?CONST
     
-// const name = 'John';
-// console.log(name);
-//can not re-assign
-// name = 'Sara';
-//Have to assign a value
-// const greeting;
+const name = 'John';
+console.log(name);
+//*can not re-assign
+//name = 'Sara';
+//*Have to assign a value
+//const greeting;
 
-// ------------------------------------------
-/*
-//some people confuse when we use const with array , object and primitive data (string, number) thing can be change but can not re-assign 
-//create object literal
+//*some people confuse when we use const with array , object and primitive data (string, number) thing can be change but can not re-assign 
+//*create object literal
 const person = {
     name:'John',
     age:30
 }
-//in const we can not change a whole array, but data inside array it can
+//*in const we can not change a whole array, but data inside array it can
 person.name = 'Sara';
 person.age = 32;
 
@@ -74,35 +75,39 @@ person.age = 32;
 
 const number = [1,2,3,4,5];
 number.push(6);
-//push() is method to add on to the array
+//*push() is method to add on to the array
 console.log(number);
-// using const unless i plan the value changing , unless i need to initialize it , iterator or loop. other than that using const, now that this value should not be re assign, it can mutate if it is an array or object , that make your code more secure , robust, more readable
+//* using const unless i plan the value changing , unless i need to initialize it , iterator or loop. other than that using const, now that this value should not be re assign, it can mutate if it is an array or object , that make your code more secure , robust, more readable
 
-//Data Types in JS
+/*
+//!------------------------------------------
+//*! Data Types in JS
 
-//String
+//*?String
 const name = 'Seulgi';
-//Age 
+//*?Age 
 const age = 25;
-//Boolean
+//*?Boolean
 const hasKid = false;
-//Null
+//*?Null
 const boyFriend = null;
-//Undefined
+//*?Undefined
 let redVelvet;
-// Symbol
+//*?Symbol
 const sym = Symbol();
 
-//REFERENCE TYPES - Objects
-//Array
+//*?REFERENCE TYPES - Objects
+
+//*?Array
 const hobbies = ['Dance', 'singing'];
-// Object literals
+
+//*?Object literals
 const address = {
     city: 'Ansan',
     State: 'Gyeonggi-do,KR'
 };
 
-//Date
+//*?Date
 const today = new Date();
 
 
@@ -119,34 +124,36 @@ console.log(typeof address);
 console.log(today);
 console.log(typeof today);
 console.log();
-*/
-// ------------------------------------------
 
-// ------------------------------------------
-//Type Conversion
+//! ------------------------------------------
+*/
+
 /*
+//! ------------------------------------------
+//*! Type Conversion
+
 let val;
 
-//Number to String
+//*?Number to String
 val = String(534);
 val = String(4+4);
 
-//Boolean to String
+//*?Boolean to String
 val = String(true);
 
-//Date to String
+//*?Date to String
 val = String(new Date());
 
-//Array to String
+//*?Array to String
 val = String([1,2,3,4]);
 
-//toString()
-// val = 5;
+//*?toString()
+val = 5;
 // val.toString(); //that is WRONG
-// val = (5).toString();
+val = (5).toString();
 val = (true).toString();
 
-//String to Number
+//*?String to Number
 val = Number('5');
 val = Number(true);
 val = Number(false);
@@ -159,14 +166,14 @@ val = parseFloat('200.90');
 
 
 
-//Output
+//*Output
 console.log(val);
 console.log(typeof val);
 // console.log(val.length);
-//.length will only work on string
+//*.length will only work on string
 console.log(val.toFixed(2))
 
-//Type coercion is when data type is different (string + number) JS will convert it to a String, and concatinate it
+//*?Type coercion is when data type is different (string + number) JS will convert it to a String, and concatinate it
 const val1 = 5;
 const val2 = '6';
 const sum = val1 + val2;
@@ -175,11 +182,11 @@ const sum = val1 + val2;
 console.log(sum);
 console.log(typeof sum);
 
-// ------------------------------------------
+//! ------------------------------------------
 */
 /*
-// ------------------------------------------
-//Numbers and The Math Object
+//! ------------------------------------------
+//*! Numbers and The Math Object
 const num1 = 100;
 const num2 = 50;
 let val;
@@ -190,7 +197,7 @@ val = num1 - num2;
 val = num1 / num2;
 val = num1 % num2;
 
-// Math Object
+//*?Math Object
 val = Math.PI; //phi
 val = Math.E;   //2.7....
 val = Math.round(2.2); //rounded
@@ -211,14 +218,12 @@ val = Math.floor(Math.random() * 10 + 5); //it is gonna be 5 trough 10+5
 
 console.log(val);
 
-
-
-
-// ------------------------------------------
+//! ------------------------------------------
 */
 
-// ------------------------------------------
-//String Methods and concatination
+/*
+//! ------------------------------------------
+//*! String Methods and concatination
 
 const firstName = 'William';
 const lastName = 'Vengeance';
@@ -230,57 +235,57 @@ let val;
 
 val = firstName + lastName;
 
-// Contacenation
+//*?Contacenation
 val = firstName +' '+ lastName;
 
-// Append
+//*?Append
 val = 'Yami ';
 val += 'Sukehiro';
 
 val = 'Hello my name is '+ firstName +'and I am '+age;
-// Escaping
+//*?Escaping
 val = "That's awesome, I can't wait";
 val = 'That\'s awesome, I can\'t wait';
 
-// Length
+//*?Length
 val = firstName.length;
 
-// concat()
+//*?concat()
 val = firstName.concat(' D ', lastName);
 
-// Change case
+//*?Change case
 val = firstName.toUpperCase();
 val = firstName.toLowerCase();
 
-// get Index
+//*?get Index
 val = firstName[3];
 
-// indexOf() William
+//*?indexOf() William
 val = firstName.indexOf('l');
 val = firstName.lastIndexOf('z');
-    //if we seraching in indexOf() and the car is not there, it return -1 by default
+    //*if we seraching in indexOf() and the car is not there, it return -1 by default
 
-// charAt(), is opposite of indexOf()
+//*?charAt(), is opposite of indexOf()
 val = firstName.charAt(3);
-// Get last char
+//*?Get last char
 val = firstName.charAt(firstName.length - 1);
 
-// substring()
+//*?substring()
 val = firstName.substring(0, 4); //output Will
 
-// slice() similiar to substring()
-    //slice() is mostly used with array to pull things out of arrays
+//*?slice() similiar to substring()
+    //*slice() is mostly used with array to pull things out of arrays
 val = firstName.slice(0, 4);
 val = firstName.slice(-3); // it will start from back
 
-// split() by separator to an array
+//*?split() by separator to an array
 val = str.split(' ');
 val = tags.split(',');
 
-// replace()
+//*?replace()
 val = str.replace('William', 'Yami');
 
-// includes() return true or false, that if includes or not
+//*?includes() return true or false, that if includes or not
 val = str.includes('Hello');
 
 
@@ -289,7 +294,58 @@ console.log(val);
 
 
 
+//! ------------------------------------------
+*/
+// ! It done
+/*
+//! ------------------------------------------
+//*! Template literals
+
+const name = 'Yein';
+const age = 23;
+const job = 'Singer';
+const city = 'South Korean';
+
+let html;
+
+//*?Without template string (ES5)
+
+html =  '<ul>' +
+        '<li>Name: '+ name +'</li>'+
+        '<li>Age : '+ age +'</li>'+
+        '<li>Job : '+ job +'</li>'+
+        '<li>City : '+ city +'</li>'+
+        '</ul>';
+
+//*?With template string (ES6)
+
+function hello(){
+    return 'Anyeong!';
+}
+html = `
+    <ul>
+        <li>Name: ${name} </li>
+        <li>Age: ${age}</li>
+        <li>Job: ${job}</li>
+        <li>City: ${city}</li>
+        <li>${2 - 2}</li>
+        <li>${hello()}</li>
+        <li>Ternary Operator: ${age > 30 ? 'Over 30' : 'Under 30'}</li> 
+    </ul>
+`;
+document.body.innerHTML = html;
+
+
+
+
+
+//! ------------------------------------------
+*/
 // ------------------------------------------
 
-// It done
 
+
+
+
+
+// ------------------------------------------
