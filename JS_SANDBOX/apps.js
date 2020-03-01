@@ -341,11 +341,104 @@ document.body.innerHTML = html;
 
 //! ------------------------------------------
 */
-// ------------------------------------------
+
+//!------------------------------------------
+//*! Array and Array Methods
+
+//* Array is very important , they allow store multipple values in one variable , they can be mutated and and iterated through and they can be used in some COMPLEX ALGORITHM
+
+//*?create by []
+const numbers = [43,56,33,23,44,36,5]; 
+//*?Create by array contructor or array object
+const numbers2 = new Array(22,45,33,76,54);
+const numbers3 = new Array(-1,0,1);
+//* Both of that is an array
+
+//*?Array of string
+const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
+//*?Array of Mix
+const mixed = [22, 'Hello', true, undefined, null, {a:1,b:1}, new Date()];
+
+
+let val;
+
+
+//*? Get array of length
+val = numbers.length;
+//*? Check if is array
+val = Array.isArray(numbers);
+// val = Array.isArray('hello'); //is False
+//* it is usefull when dealing with the DOM, because we can return for instance a NODE LIST from the DOM , which is structured like an array BUT is not an actual array so we CAN'T do certain things like FOR EACH LOOP , so it's a good way , and you can convert it into array if you need
+
+//*? Get a single value
+val = numbers[3];
+
+//*? Insert nto array
+numbers[2] = 100; //*replaces index no 2
+
+//*? Find index of value
+val = numbers.indexOf(36);
+
+
+//*? MUTATING ARRAYS
+/*
+//*? add on to end
+numbers.push(250);
+
+//*? add on to front
+numbers.unshift(120);
+
+//*? Take of from end
+numbers.pop();
+
+//*? take off from front
+numbers.shift();
+
+//*? Splice values
+numbers.splice(0,0);
+//* numbers.splice(1,1); //take one array in one position, 0,0 didn't work
+//* numbers.splice(0,1); //take array , start from and end from 2d
+
+//*? Reverse values
+numbers.reverse();
+//* numbers.splice(0,2); //Splice also work with reverse
+//* numbers.reverse() //revers and reverse can delete from end
+*/
+//*? Concatenate array
+val = numbers.concat(numbers2, numbers3);
+
+//*? Sorting array
+val = fruit.sort(); //alphabetical order
+val = numbers.sort(); //it's sorting the first number in digit 100,23,36,...
+
+//*? To Sorting number Use "compare function"
+val = numbers.sort(function(x, y){
+    return x - y;
+});
+
+//*? Reverse Sorting
+val = numbers.sort(function(x, y){
+    return y - x;
+});
+//* OR use
+// val = numbers.reverse();
+
+//Find
+function under50(num){
+    return num < 50;
+    //return first number under 50
+}
+function over50(num){
+    return num > 50;
+    //return first number under 50
+}
+
+val = numbers.find(over50);
+
+console.log(numbers);
+console.log(val);
 
 
 
 
-
-
-// ------------------------------------------
+//!------------------------------------------
