@@ -341,7 +341,7 @@ document.body.innerHTML = html;
 
 //! ------------------------------------------
 */
-
+/*
 //!------------------------------------------
 //*! Array and Array Methods
 
@@ -381,7 +381,7 @@ val = numbers.indexOf(36);
 
 
 //*? MUTATING ARRAYS
-/*
+
 //*? add on to end
 numbers.push(250);
 
@@ -403,7 +403,7 @@ numbers.splice(0,0);
 numbers.reverse();
 //* numbers.splice(0,2); //Splice also work with reverse
 //* numbers.reverse() //revers and reverse can delete from end
-*/
+
 //*? Concatenate array
 val = numbers.concat(numbers2, numbers3);
 
@@ -442,3 +442,56 @@ console.log(val);
 
 
 //!------------------------------------------
+*/
+/*
+//!------------------------------------------
+//*! Object Literals
+
+//*?This refers to Object Literals
+const person = {
+    firstName: 'Seo',
+    lastName: 'Jisoo',
+    age: 26,
+    email: 'SeoJisoo@gmail.com',
+    hobbies: ['drawing','dance','acting'], //array
+    address: { //embedded object
+        city: 'KR',
+        state: 'Incheon'
+    }, 
+    getBirthYear: function(){
+        //when inside object in function we need use this keyword
+        return 2020 - this.age;
+    }
+}
+
+let val;
+
+val = person;
+
+//*Get specific name
+val = person.firstName;
+//*Or
+val = person['firstName'];
+val = person.age;
+val = person.hobbies;
+val = person.hobbies[1];
+val = person.address;
+val = person.address.state;
+val = person.address['city'];
+val = person.getBirthYear();
+
+console.log(val);
+
+const people = [
+    {name: 'Seo Jisoo', age: 26},
+    {name: 'Jeong Yein', age: 22},
+    {name: 'Lee Mijoo', age: 26}
+];
+//loop through array
+for(let i = 0; i < people.length; i++){
+    console.log(people[i].name);
+}
+
+//!------------------------------------------
+*/
+
