@@ -495,3 +495,37 @@ for(let i = 0; i < people.length; i++){
 //!------------------------------------------
 */
 
+//!------------------------------------------
+//*! Dates and Time
+
+let val;
+
+const today = new Date();
+//change it to different date
+let birthday = new Date('1-1-1994 11:25:00');
+birthday = new Date('feb 10 2020');
+birthday = new Date('1/1/2020');
+
+//val = birthday; //* this is object type
+// val = today.toString();
+val = today.getMonth(); //it zero base, so jan is 0, feb is 1, so on
+val = today.getDate();
+val = today.getDay();//it 0-6 numerical days, sun 0 , mond 1, tue 2, wed 3, thu 4, fri 5, sat 6
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(4);
+birthday.setFullYear(1999);
+birthday.setHours(13);
+birthday.setMinutes(7);
+birthday.setSeconds(43);
+
+console.log(birthday);
+
+
+//!------------------------------------------
