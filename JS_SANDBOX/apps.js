@@ -494,7 +494,7 @@ for(let i = 0; i < people.length; i++){
 
 //!------------------------------------------
 */
-
+/*
 //!------------------------------------------
 //*! Dates and Time
 
@@ -527,5 +527,115 @@ birthday.setSeconds(43);
 
 console.log(birthday);
 
+
+//!------------------------------------------
+*/
+
+//!------------------------------------------
+//*! If Statements and Comparison Operators
+
+//*?If statement is use to evaluate some kind of condition and do something base on that condition or something else if that condition is not met
+
+// if(something){
+//     do something
+// } else {
+//     do something else
+// }
+
+// = is assigning, == is compairing
+
+// const id = 100; 
+
+// //*? EQUAL TO
+// if(id == 101){
+//     //* == ,it does not matter if it a string or number
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// //*? NOT EQUAL TO
+// if(id != 100){
+//      //*. != it does not matter if it a string or number
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// //*? EQUAL TO VALUE and Type
+// if(id === '100'){
+//     //* === it matter, use it to avoid issues
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// //*? NOT EQUAL TO VALUE and Type
+// if(id !== '100'){
+//     //* .!== it matter, use it to avoid issues
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// //*? To know that variable is define or undefined, if just if(id){...}
+// if(typeof id !== 'defined'){
+//     console.log(`The ID is ${id}`);
+// } else {
+//     console.log('NO ID');
+// }
+
+// //*? GREATER THAN OR LESS THAN
+// if(id >= 100){
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// //*? IF ELSE
+
+// const color = 'yellow';
+
+// if(color === 'red'){
+//     console.log('color is red')
+// } else if(color === 'blue') {
+//     console.log('color is blue')
+// } else {
+//     console.log('color is not blue or red')
+// }
+
+//*? LOGICAL OPERATOR
+//* if you wanna test more tha one things , we can use this operator
+
+const name = 'Seulgi';
+const age = 20;
+
+//* AND && is when both two is true
+if(age > 0 && age < 12){
+    console.log(`${name} is a child`)
+} else if(age >= 13 && age <= 19){
+    console.log(`${name} is a teenager`)
+} else {
+    console.log(`${name} is a adult`)
+}
+
+//* OR || , when is one of the condition is true
+
+if (age < 16 || age > 65){
+    console.log(`${name} can not run in race`)
+} else {
+    console.log(`${name} is registered on a race`)
+}
+
+const id = 100;
+
+//* TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+//* WITHOUT BRACES
+if(id === 100) 
+    console.log('CORRECT'); 
+else 
+    console.log('INCORRECT');
 
 //!------------------------------------------
