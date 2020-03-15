@@ -1,3 +1,10 @@
+//*! CONTENT
+//*? SUB CONTENT
+//* COMMENT
+// COMMENT CODE
+//@ i'am add this to settings.json
+todo: this
+
 // alert('Hi!');
 // * Log to console
 /* 
@@ -21,7 +28,6 @@ console.timeEnd('hello');
  
 //! ------------------------------------------
 */
-
 /*
 //!------------------------------------------
 //*! variables are var, let, const
@@ -78,7 +84,7 @@ number.push(6);
 //*push() is method to add on to the array
 console.log(number);
 //* using const unless i plan the value changing , unless i need to initialize it , iterator or loop. other than that using const, now that this value should not be re assign, it can mutate if it is an array or object , that make your code more secure , robust, more readable
-
+*/
 /*
 //!------------------------------------------
 //*! Data Types in JS
@@ -423,14 +429,14 @@ val = numbers.sort(function(x, y){
 //* OR use
 // val = numbers.reverse();
 
-//Find
+//*Find
 function under50(num){
     return num < 50;
-    //return first number under 50
+    //*return first number under 50
 }
 function over50(num){
     return num > 50;
-    //return first number under 50
+    //*return first number under 50
 }
 
 val = numbers.find(over50);
@@ -459,7 +465,7 @@ const person = {
         state: 'Incheon'
     }, 
     getBirthYear: function(){
-        //when inside object in function we need use this keyword
+        //*when inside object in function we need use this keyword
         return 2020 - this.age;
     }
 }
@@ -487,7 +493,7 @@ const people = [
     {name: 'Jeong Yein', age: 22},
     {name: 'Lee Mijoo', age: 26}
 ];
-//loop through array
+//*loop through array
 for(let i = 0; i < people.length; i++){
     console.log(people[i].name);
 }
@@ -501,7 +507,7 @@ for(let i = 0; i < people.length; i++){
 let val;
 
 const today = new Date();
-//change it to different date
+//*change it to different date
 let birthday = new Date('1-1-1994 11:25:00');
 birthday = new Date('feb 10 2020');
 birthday = new Date('1/1/2020');
@@ -530,7 +536,7 @@ console.log(birthday);
 
 //!------------------------------------------
 */
-
+/*
 //!------------------------------------------
 //*! If Statements and Comparison Operators
 
@@ -638,4 +644,53 @@ if(id === 100)
 else 
     console.log('INCORRECT');
 
+
+
 //!------------------------------------------
+*/
+
+//*! Switches
+
+const color = 'yellow';
+//* use switch when the case is a lot, rather use if else, if else and so on
+switch(color){
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'blue':
+        console.log('Color is blue');
+        break;
+    default:
+        console.log('Color is not red or blue');
+        break;
+
+}
+
+switch(new Date().getDay()){
+    case 0:
+        day = 'Ahad';
+        break;
+    case 1:
+        day = 'Senin';
+        break;
+    case 2:
+        day = 'Selasa';
+        break;
+    case 3:
+        day = 'Rabu';
+        break;
+    case 4:
+        day = 'Kamis';
+        break;
+    case 5:
+        day = 'Jum\'at';
+        break;
+    case 6:
+        day = 'Sabtu';
+        break;
+}
+
+console.log(`Sekarang Hari ${day}`);
+
+//!------------------------------------------
+
