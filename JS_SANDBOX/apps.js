@@ -648,7 +648,8 @@ else
 
 //!------------------------------------------
 */
-
+/*
+//!------------------------------------------
 //*! Switches
 
 const color = 'yellow';
@@ -693,4 +694,73 @@ switch(new Date().getDay()){
 console.log(`Sekarang Hari ${day}`);
 
 //!------------------------------------------
+*/
 
+
+//!------------------------------------------
+//*! FUNCTION DECLARATION AND EXPRESSIONS
+
+//*? FUNCTION DECLARATIONS
+//* Greet and Greet2 it is different
+function greet(firstName = 'Kang', lastName = 'Seulgi'){
+    //* In function we can attach a parameter (also call argument)
+    //* We can also make the parameter by default, with es5, so when it is parameters is empty/undefined so we can return default value
+    //* Better way is by es6, with simple (=) in the parameter
+
+    // if(typeof firstName === 'undefined'){firstName = 'Kang'}
+    // if(typeof lastName === 'undefined'){lastName = 'Seulgi'}
+    console.log('Hello! ' + firstName +' '+lastName);
+}
+function greet2(){
+    // console.log('Hello!');
+    return 'Hello!';
+}
+// greet();
+// console.log(greet2());
+
+//*? FUNCTION EXPRESSIONS
+//* Function expressions is basically, putting a function as  varibale assignment, for example
+
+const square = function(x = 3){
+    //* Function expression is can be name or anonymous, usually they anonymous 
+    return x*x;
+}; 
+//* Put a semicolon because this is basically a varible 
+
+// console.log(square());
+
+//*?IMMIDIATELY INVOKABLE FUNCTION EXPRESSIONS - IIEFs
+
+// (function(){
+//     console.log('IIFEs Ran..');
+// })();
+
+(function(name){
+    console.log('IIFEs Ran..'+' '+name);
+})('Brad');
+//* This are very useful when it comes to certain design patterns like the module pattern ...
+
+//*? PROPERTY METHOD
+//* We can put function inside of objects as well as opposed to just in the global scope 
+//* When a function is put inside of an object it's called a method
+
+const todo = {
+    add: function(){
+        console.log('Add todo..');
+    },
+    edit: function(id){
+        console.log(`Edit todo ${id}`);
+    }
+}
+
+//* We can also define function for this object outside of this 
+
+todo.delete = function(){
+    console.log('Delete todo..');
+}
+
+todo.add();
+todo.edit(1);
+todo.delete();
+
+//!------------------------------------------
