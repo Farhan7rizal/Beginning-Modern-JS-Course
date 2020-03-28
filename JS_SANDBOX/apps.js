@@ -5,6 +5,7 @@
 //@ i'am add this to settings.json
 todo: this
 
+
 // alert('Hi!');
 // * Log to console
 /* 
@@ -696,7 +697,7 @@ console.log(`Sekarang Hari ${day}`);
 //!------------------------------------------
 */
 
-
+/*
 //!------------------------------------------
 //*! FUNCTION DECLARATION AND EXPRESSIONS
 
@@ -764,3 +765,98 @@ todo.edit(1);
 todo.delete();
 
 //!------------------------------------------
+*/
+/*
+//!------------------------------------------
+//*! FUNCTION DECLARATION AND EXPRESSIONS
+//* Loop is an instruction that repeat those specific condition is reached. 
+//* Loop are use to run the same block of code using different values each time 
+
+//*? FOR LOOP
+for(let i = 0; i < 10; i++ ){
+    //* You can't use const inside a loop, because it is gonna be change
+    //* i++ === i = i + i
+    //* if you want a specific iteration, with another value, use if
+    if(i === 2){
+        console.log('2 is my favorite number');
+        continue; //* is gonna stop the loop here and just go next iteration, so number 2 is no longer include or without continuing after that if statement
+    }
+
+    //*Break, is 
+    if(i === 3){
+        console.log('Stop the loop')
+        break;
+    }
+    console.log('Number ' + i);
+}
+
+//*? WHILE LOOP
+    //* Use for loop when you know how many time it is gonna run, how many iterations you gonna have, and use while lopp when you dont, when it's unclear
+
+let x = 0;
+
+while(x < 2){
+    // if(x === 3){
+    //     console.log('3 is number');
+    //     continue;
+    // } //* Do not try this if code inside while, it will loop infintely
+    console.log('Number ' + x);
+    x++;
+}
+
+//*? DO WHILE 
+    //* do while, it it is always going to run , at least one loop
+let i = 100;
+do {
+    console.log('Nomor '+ i);
+    i++;
+}
+
+while(i < 10); //* the condition is does not met, but it run once
+
+//*? LOOP THROUGH ARRAY
+//* with for loop
+
+const cars = ['ford', 'chevy', 'honda', 'toyota'];
+
+for(let i = 0; i < cars.length; i++){
+    console.log(cars[i]);
+}
+
+//*? FOREACH ARRAY LOOP
+cars.forEach(function(car, index, array){
+    //* function takes 3 parameters : value or iterator, index and the actual array, the entire array
+    console.log(`${index} : ${car}`);
+    // console.log(array);
+});
+
+//*? MAP
+const users = [
+    {id: 1, name:'Kei'},
+    {id: 2, name:'Baby Soul'},
+    {id: 3, name:'Fennec Fox'},
+    {id: 4, name:'Gorani'}
+];
+const ids = users.map(function(user){
+    //* take this array of object, and create an array of the ids
+    return user.id; //* return each id inside of an array
+});
+
+console.log(ids);
+
+//*? FOR IN LOOP
+const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 40
+}
+
+
+for(let x in user){
+    //* it just take one object, not many object
+    // console.log(x);
+    console.log(`${x} : ${user[x]}`);
+}
+
+//!------------------------------------------
+*/
