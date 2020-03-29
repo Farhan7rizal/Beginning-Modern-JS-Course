@@ -860,3 +860,76 @@ for(let x in user){
 
 //!------------------------------------------
 */
+/*
+//!------------------------------------------
+//*! FUNCTION DECLARATION AND EXPRESSIONS
+//*? TAKE A LOOK AT THE WINDOW OBJECT
+    //* Because DOM is the part of the window object as with many other things, the window is the global object in client side JS
+
+//*? WINDOW METHOD / OBJECTS / PROPERTIES
+// window.console.log(123);
+
+//*? ALERT
+// window.alert('Hello World!');
+
+//*? PROMPT
+// const input = prompt();
+// alert(input);
+
+//*? CONFIRM
+// if(confirm('are you sure')){
+//     console.log('YES');
+// } else {
+//     console.log('NO');
+// }
+
+//*? Outter height and width
+    //* from upper to bottom 
+val = window.outerHeight;
+val = window.outerWidth;
+
+//*? Outter height and width
+    //* from upper to bottom in scrool bar
+val = window.innerHeight;
+val = window.innerWidth;
+
+//*? Scroll points
+val = window.scrollY;
+val = window.scrollX;
+
+//*? Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+//*? Redirect
+// window.location.href = 'http://google.com';
+
+//*? Reload
+// window.location.reload();
+
+//*? History Object
+// window.history.go(-3);
+val = window.history.length;
+
+//*? Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.vendor;
+val = window.navigator.languages;
+
+console.log(val);
+
+//!------------------------------------------
+*/
+
+//!------------------------------------------
+//*! 
+//*? 
+
+
+//!------------------------------------------
