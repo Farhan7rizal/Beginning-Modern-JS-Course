@@ -862,7 +862,7 @@ for(let x in user){
 */
 /*
 //!------------------------------------------
-//*! FUNCTION DECLARATION AND EXPRESSIONS
+//*! A LOOK AT THE WINDOW OBJECT
 //*? TAKE A LOOK AT THE WINDOW OBJECT
     //* Because DOM is the part of the window object as with many other things, the window is the global object in client side JS
 
@@ -926,10 +926,41 @@ console.log(val);
 
 //!------------------------------------------
 */
+/*
+//!------------------------------------------
+//*! BLOCK SCOPE WITH LET & CONST
+//*? GLOBAL SCOPE & FUNCTION SCOPE
+
+var a = 1;
+let b = 2;
+const c = 3;
+
+function test(){
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function Scope: ', a ,b ,c);
+}
+
+// test();
+if(true){
+//*? BLOCK SCOPE
+var a = 4;
+let b = 5;
+const c = 6;
+console.log('IF Scope: ', a ,b ,c);
+}
+//* The way let and const work is how most programming languages work , var is just security risk and make confussion if you have variable in the global scope and inside block have same name, then think can get messed up 
+
+for(var a = 0; a < 10; a++) {
+    console.log(`Loop: ${a}`);
+}
+//* in for loop var will be increment until condition met, this case is 10
+
+//* SOOOOO let and const have block level scope and global scope and var has only function level scope
+
+console.log('Global Scope: ', a ,b ,c);
+
 
 //!------------------------------------------
-//*! 
-//*? 
-
-
-//!------------------------------------------
+*/
