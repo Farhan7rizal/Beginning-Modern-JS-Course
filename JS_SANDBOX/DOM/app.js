@@ -1,4 +1,6 @@
-//*? DOM TYPES AND PROPERTY
+/*
+//! ------------------------------------------------------------------------------
+//*! DOM TYPES AND PROPERTY
 
 let val;
 
@@ -49,49 +51,50 @@ scriptsArr.forEach(function(script){
 
 
 console.log(val);
-
-
-
-
-/*
-let val;
-
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
-
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
-
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
-
-val = document.images;
-
-val = document.scripts;
-val = document.scripts[2].getAttribute('src');
-
-let scripts = document.scripts;
-
-let scriptsArr = Array.from(scripts);
-
-scriptsArr.forEach(function(script) {
-  console.log(script.getAttribute('src'));
-});
-
-console.log(val);
+//! ------------------------------------------------------------------------------
 */
+
+//! ------------------------------------------------------------------------------
+//*! DOM SELECTOR FOR SINGLE ELEMENT
+
+//* in vanilla JS couple different selector that can be catogorized into different types , single and multiple elements selector. Single elements allow you to grab one element by it is id , class and ext, and grab single first one. Multiple elements get all of the elements with that class and return in each HTML collection or node list deppending on on which selector you use
+
+//*? document.getElementById()
+
+// console.log(document.getElementById('task-title'));
+
+//*? Get thing from the element
+// console.log(document.getElementById('task-title').id);
+// console.log(document.getElementById('task-title').className);
+
+//* Better to make it as variable
+// const taskTitle = document.getElementById('task-title');
+
+//*? Change Styling
+// taskTitle.style.background = '#333';
+// taskTitle.style.color = '#fff';
+// taskTitle.style.padding = '5px';
+// taskTitle.style.display = 'none';
+
+//*? Change Content
+// taskTitle.textContent = 'Task List';
+// taskTitle.innerText = 'My Task';
+// taskTitle.innerHTML = '<span style="color:red">Task list</span>';
+
+//*? Query Selector / document.querySelector 
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
+
+//*? Target Item in single selector
+document.querySelector('li').style.color = 'red'; //* only get the firts one
+document.querySelector('ul li').style.color = 'blue'; //* only get the firts one
+
+document.querySelector('li:last-child').style.color = 'red';
+document.querySelector('li:nth-child(3)').style.color = 'yellow';
+document.querySelector('li:nth-child(4)').textContent = 'Hello World';
+document.querySelector('li:nth-child(odd)').style.background = '#ccc'; //* only get the firts one
+document.querySelector('li:nth-child(even)').style.background = '#f4f4f4'; //* only get the firts one
+
+
+//! ------------------------------------------------------------------------------
