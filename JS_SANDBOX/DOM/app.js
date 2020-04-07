@@ -53,7 +53,7 @@ scriptsArr.forEach(function(script){
 console.log(val);
 //! ------------------------------------------------------------------------------
 */
-
+/*
 //! ------------------------------------------------------------------------------
 //*! DOM SELECTOR FOR SINGLE ELEMENT
 
@@ -82,19 +82,85 @@ console.log(val);
 // taskTitle.innerHTML = '<span style="color:red">Task list</span>';
 
 //*? Query Selector / document.querySelector 
-console.log(document.querySelector('#task-title'));
-console.log(document.querySelector('.card-title'));
-console.log(document.querySelector('h5'));
+// console.log(document.querySelector('#task-title'));
+// console.log(document.querySelector('.card-title'));
+// console.log(document.querySelector('h5'));
 
 //*? Target Item in single selector
-document.querySelector('li').style.color = 'red'; //* only get the firts one
-document.querySelector('ul li').style.color = 'blue'; //* only get the firts one
+// document.querySelector('li').style.color = 'red'; //* only get the firts one
+// document.querySelector('ul li').style.color = 'blue'; //* only get the firts one
 
-document.querySelector('li:last-child').style.color = 'red';
-document.querySelector('li:nth-child(3)').style.color = 'yellow';
-document.querySelector('li:nth-child(4)').textContent = 'Hello World';
-document.querySelector('li:nth-child(odd)').style.background = '#ccc'; //* only get the firts one
-document.querySelector('li:nth-child(even)').style.background = '#f4f4f4'; //* only get the firts one
+// document.querySelector('li:last-child').style.color = 'red';
+// document.querySelector('li:nth-child(3)').style.color = 'yellow';
+// document.querySelector('li:nth-child(4)').textContent = 'Hello World';
+// document.querySelector('li:nth-child(odd)').style.background = '#ccc'; //* only get the firts one
+// document.querySelector('li:nth-child(even)').style.background = '#f4f4f4'; //* only get the firts one
 
+
+//! ------------------------------------------------------------------------------
+*/
+
+//! ------------------------------------------------------------------------------
+//*! DOM SELECTOR FOR MULTIPLE ELEMENT
+//* It return HTML collection which can be convert to an array and we can do certain thing like an array
+
+//*? document.getElementsByClassName
+
+// const items = document.getElementsByClassName('collection-item');
+// console.log(items);
+// console.log(items[0]);
+// items[0].style.color = 'red';
+// items[3].textContent = 'Hello';
+// items[2].innerHTML = 'Hello <a href="#" class="delete-item secondary-content"><i class="fa fa-remove"></i></a>';
+
+//* with querySelector we can select not globaly but in specific because we select ul in querySelector
+// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+
+// console.log(listItems);
+
+
+//*? document.getElementsByTagName
+
+// let lis = document.getElementsByTagName('li');
+// console.log(lis);
+// console.log(lis[0]);
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'Hello';
+
+//*?Convert HTML collection into array
+// lis = Array.from(lis);
+
+// lis.reverse();
+
+// lis.forEach(function(li,index,array){
+//   console.log(li.className);
+//   li.textContent = `${index}: Hello`
+//   // console.log(array);
+// });
+
+// console.log(lis);
+
+//*? document.querySelectorAll 
+  //* return a NodeList ,textNodes , can do array method without convert it
+
+  const items = document.querySelectorAll('ul.collection li.collection-item');
+
+  items.forEach(function(item, index){
+    // console.log(item.className);
+    item.textContent = `${index}: Hello`;
+  });
+
+  const liOdd = document.querySelectorAll('li:nth-child(odd)');
+  const liEven = document.querySelectorAll('li:nth-child(even)');
+
+  liOdd.forEach(function(li, index){
+    li.style.background = '#ccc';
+  });
+
+  for(let i = 0; i < liEven.length; i++){
+    liEven[i].style.background = '#f4f4f4';
+  };
+
+  console.log(items);
 
 //! ------------------------------------------------------------------------------
