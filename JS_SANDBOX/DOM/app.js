@@ -99,7 +99,7 @@ console.log(val);
 
 //! ------------------------------------------------------------------------------
 */
-
+/*
 //! ------------------------------------------------------------------------------
 //*! DOM SELECTOR FOR MULTIPLE ELEMENT
 //* It return HTML collection which can be convert to an array and we can do certain thing like an array
@@ -145,22 +145,96 @@ console.log(val);
 
   const items = document.querySelectorAll('ul.collection li.collection-item');
 
-  items.forEach(function(item, index){
-    // console.log(item.className);
-    item.textContent = `${index}: Hello`;
-  });
+  // items.forEach(function(item, index){
+  //   // console.log(item.className);
+  //   item.textContent = `${index}: Hello`;
+  // });
 
-  const liOdd = document.querySelectorAll('li:nth-child(odd)');
-  const liEven = document.querySelectorAll('li:nth-child(even)');
+  // const liOdd = document.querySelectorAll('li:nth-child(odd)');
+  // const liEven = document.querySelectorAll('li:nth-child(even)');
 
-  liOdd.forEach(function(li, index){
-    li.style.background = '#ccc';
-  });
+  // liOdd.forEach(function(li, index){
+  //   li.style.background = '#ccc';
+  // });
 
-  for(let i = 0; i < liEven.length; i++){
-    liEven[i].style.background = '#f4f4f4';
-  };
+  // for(let i = 0; i < liEven.length; i++){
+  //   liEven[i].style.background = '#f4f4f4';
+  // };
 
-  console.log(items);
+  // console.log(items);
+
+//! ------------------------------------------------------------------------------
+*/
+
+//! ------------------------------------------------------------------------------
+//*! TRAVERSING THE DOM
+  //* Traverse basically move up and down , dealing with parent and children of specific node r what ever it is that we select 
+
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+
+//*? take a look at different properties that are attached to these item or these node nad they have to do getting children and parent of these node
+
+//*? Get child nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
+
+//* 1	Element -	element name	null
+//* 2	Attr -	attribute name	attribute value
+//* 3	Text -	#text	content of node
+//* 4	CDATASection -	#cdata-section	content of node
+//* 5	EntityReference	- entity reference name	null
+//* 6	Entity -	entity name	null
+//* 7	ProcessingInstruction -	target	content of node
+//* 8	Comment -	#comment	comment text
+//* 9	Document -	#document	null
+//* 10	DocumentType -	doctype name	null
+//* 11 DocumentFragment -	#document fragment	null
+//* 12	Notation - notation name
+
+//*? Get Children Element Nodes
+val = list.children;
+val = list.children[0];
+list.children[1].textContent= 'Hello';
+//*? Get Children of Children
+list.children[3].children[0].id = 'test-link'; //* Added id
+val = list.children[3].children[0];
+
+//*? Get first child and last child
+val = list.firstChild;
+val = list.firstElementChild;
+
+val = list.lastChild;
+val = list.lastElementChild;
+
+val = list.childElementCount; //* count element child
+
+//*? Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+//*? Get Next Sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+
+//*? Get Previous Sibling
+// val = listItem.previousSibling;
+// val = listItem.previousElementSibling;
+
+
+
+
+
+  console.log(val);
 
 //! ------------------------------------------------------------------------------
