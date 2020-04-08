@@ -165,7 +165,7 @@ console.log(val);
 
 //! ------------------------------------------------------------------------------
 */
-
+/*
 //! ------------------------------------------------------------------------------
 //*! TRAVERSING THE DOM
   //* Traverse basically move up and down , dealing with parent and children of specific node r what ever it is that we select 
@@ -236,5 +236,44 @@ val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 
 
   console.log(val);
+
+//! ------------------------------------------------------------------------------
+*/
+
+//! ------------------------------------------------------------------------------
+//*! CREATING ELEMENTS
+
+//* Using const is fine because we are not re-assigning these variable (const) , we're adding stuff to them , like classes and id, or running method on properties on them, we're not declairing
+
+//*? Create Element
+const li = document.createElement('li');
+
+//*? Add Class
+li.className = 'collection-item';
+
+//*? Add id
+li.id = 'new item';
+
+//*? Add Attribute
+li.setAttribute('title', 'new Item');
+
+//*? Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+//*? Create a new link element
+const link = document.createElement('a');
+//*? Add classes 
+link.className = 'delete-item secondary-content';
+//*? Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+//*? Append link into li
+li.appendChild(link);
+
+//*? Append li Child As Child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
+
 
 //! ------------------------------------------------------------------------------
