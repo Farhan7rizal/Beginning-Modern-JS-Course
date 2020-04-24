@@ -239,7 +239,7 @@ val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 
 //! ------------------------------------------------------------------------------
 */
-
+/*
 //! ------------------------------------------------------------------------------
 //*! CREATING ELEMENTS
 
@@ -276,4 +276,71 @@ document.querySelector('ul.collection').appendChild(li);
 console.log(li);
 
 
+//! ------------------------------------------------------------------------------
+*/
+
+
+//! ------------------------------------------------------------------------------
+//*! REMOVING AND REPLACING ELEMENTS
+
+//*? REPLACE ELEMENT
+  //* We want to replace Heading
+//*? Creating Element
+const newHeading = document.createElement('h2');
+
+//*? Add id
+newHeading.id = 'task-title';
+
+//*? New text node
+newHeading.appendChild(document.createTextNode('Task List'));
+
+//*? get the old heading that we want a replace
+  //* We need a parent because , because we gonna use replace child and we need to call that on the parent
+
+const oldHeading = document.getElementById('task-title');
+
+//*? Get Parent of old Heading, that is card-action
+const cardAction = document.querySelector('.card-action');
+
+//*? Replace the oldHeading with new Heading
+cardAction.replaceChild(newHeading, oldHeading);
+
+
+// console.log(newHeading);
+
+//*? REMOVE ELEMENT
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// console.log(list);
+//*? Remove list item (lis)
+lis[0].remove();
+
+//*? Remove Child element (list)
+list.removeChild(lis[3]);
+
+//CLASSES & ATTRIBUTE 
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+let val;
+
+//CLASSES
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+link.classList.add('test');
+// link.classList.remove('test');
+val = link;
+
+//ATTRIBUTE
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'https://google.com');
+val = link.hasAttribute('href');
+link.setAttribute('title', 'Google');
+val = link.hasAttribute('title');
+link.removeAttribute('title');
+val = link;
+
+console.log(val);
 //! ------------------------------------------------------------------------------
