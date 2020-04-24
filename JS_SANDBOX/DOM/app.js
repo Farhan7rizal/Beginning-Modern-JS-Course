@@ -279,7 +279,7 @@ console.log(li);
 //! ------------------------------------------------------------------------------
 */
 
-
+/*
 //! ------------------------------------------------------------------------------
 //*! REMOVING AND REPLACING ELEMENTS
 
@@ -343,4 +343,52 @@ link.removeAttribute('title');
 val = link;
 
 console.log(val);
+//! ------------------------------------------------------------------------------
+*/
+
+
+//! ------------------------------------------------------------------------------
+//*! EVENT LISTENER AND THE EVENT OBJECT
+    //*? Add event listener to the clear task button
+// document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//   console.log('Hello world');
+
+//   // e.preventDefault();
+// });
+//* e is event paramenter
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  // console.log('Clicked');
+
+let val;
+
+val = e;
+
+//*? Event target element 
+
+val = e.target;
+val = e.target.id;
+val = e.target.className;
+val = e.target.classList;
+
+// e.target.innerText = 'Hello';
+
+//*? Event type
+val = e.type;
+
+val = e.timeStamp;
+
+//*? Coordinate event relative to the WINDOW
+val = e.clientY;
+val = e.clientX;
+
+//*? Coordinate event relative to the ELEMENT
+val = e.offsetY;
+val = e.offsetX;
+
+  console.log(val);
+};
+
+
 //! ------------------------------------------------------------------------------
