@@ -346,7 +346,7 @@ console.log(val);
 //! ------------------------------------------------------------------------------
 */
 
-
+/*
 //! ------------------------------------------------------------------------------
 //*! EVENT LISTENER AND THE EVENT OBJECT
     //*? Add event listener to the clear task button
@@ -392,3 +392,45 @@ val = e.offsetX;
 
 
 //! ------------------------------------------------------------------------------
+*/
+
+
+//! ------------------------------------------------------------------------------
+//*! MOUSE EVENT
+
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
+
+//*? Click Event
+// clearBtn.addEventListener('click', runEvent); 
+//*? Double Click
+// clearBtn.addEventListener('dblclick', runEvent);
+//*? Mouse Down
+// clearBtn.addEventListener('mousedown', runEvent);
+//*? Mouse Up
+// clearBtn.addEventListener('mouseup', runEvent);
+//*? Mouse Enter
+// card.addEventListener('mouseenter', runEvent); //inside elemet
+//*? Mouse Leave
+// card.addEventListener('mouseleave', runEvent); //inside element
+//*? Mouse Over
+// card.addEventListener('mouseover', runEvent); //another element that inside element
+//*? Mouse Out
+// card.addEventListener('mouseout', runEvent); //another element that inside element
+//*? Mouse Move
+// card.addEventListener('mousemove',runEvent);
+
+//*? Event Handler
+function runEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+
+  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetX}, 40)`;
+}
+
+
+//! ------------------------------------------------------------------------------
+
