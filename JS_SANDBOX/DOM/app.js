@@ -434,7 +434,7 @@ function runEvent(e){
 
 //! ------------------------------------------------------------------------------
 */
-
+/*
 //! ------------------------------------------------------------------------------
 //*! KEYBOARDS AND INPUT EVENT
 const form = document.getElementById('task-form');
@@ -482,6 +482,63 @@ function runEvent(e){
 
 
 //! ------------------------------------------------------------------------------
+*/
 
+
+//! ------------------------------------------------------------------------------
+//*! EVENT BUBBLING AND DELEGATION
+    //*? Event Bubbling is so when an event happens on a particular element in the dorm and actually will bubble up through it is parent  
+
+    //*? Event Delegation is almost opposite of event bubbling , it's where we put the listener on of the parent element and we use LOGIC inside of the event handler to target element that we actually want 
+
+
+//*? EVENT BUBBLING
+// document.querySelector('.card-title').addEventListener('click', function(){
+//   console.log('card title');
+// });
+
+// document.querySelector('.card-content').addEventListener('click', function(){
+//   console.log('card content');
+// });
+
+// document.querySelector('.card').addEventListener('click', function(){
+//   console.log('card');
+// });
+
+// document.querySelector('.col').addEventListener('click', function(){
+//   console.log('col');
+// });
+    //* All the event is occurs because of event bubbling when i just click the card-title
+
+
+
+// const delItem = document.querySelector('.delete-item');
+
+// delItem.addEventListener('click', deleteItem);
+  //* we need event delegation, because it just the firts one that get eventlistener
+
+//*? EVENT DELEGATION  
+
+document.body.addEventListener('click', deleteItem);
+
+// function deleteItem(e){
+//     if(e.target.parentElement.className === 'delete-item secondary-content'){
+//     console.log('delete item');
+//   }
+// } //* work if all class name must included 
+
+//*? target all link, and target that parent element, that is list item
+function deleteItem(e){
+  if(e.target.parentElement.classList.contains('delete-item')){
+  console.log('delete item'); 
+  e.target.parentElement.parentElement.remove();
+  }
+}
+
+
+
+
+
+//! ------------------------------------------------------------------------------
 
 
